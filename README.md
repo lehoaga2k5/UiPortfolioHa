@@ -19,3 +19,6 @@ npm run deploy    # Build & deploy to Cloudflare (lehoanganh.id.vn)
 ```powershell
 .\deploy-cloudflare.ps1
 ```
+
+## Operations & Maintenance Guide
+Xem chi tiết quy trình chỉnh sửa nội dung, thêm bài viết Journal/Case Study, đồng bộ Figma, cấu hình GitHub Actions CI/CD tự động và Rollback khẩn cấp trong [OPERATIONS.md](./OPERATIONS.md).
