@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-portfolio-neutral: #f7f6f3;
+  --color-portfolio-subtle: #f2efe9;
+  --color-portfolio-inset: #eae6de;
+  --color-portfolio-line: #ded9d0;
+  --color-portfolio-primary: #111111;
+  --color-portfolio-body: #4a4844;
+  --color-portfolio-muted: #68635c;
+  --color-portfolio-inverse: #ffffff;
+  --color-portfolio-inverse-muted: #d6d1c9;
+  --color-portfolio-secondary: #fa3674;
+  --color-portfolio-secondary-text: #b8004c;
+  --color-portfolio-tint: #ffe9f0;
+  --color-portfolio-tertiary: #baff39;
+}
+
+:root {
+  /* Exact Figma Portfolio colors & Glass primitives */
+  --portfolio-neutral: #f7f6f3;
+  --portfolio-subtle: #f2efe9;
+  --portfolio-inset: #eae6de;
+  --portfolio-line: #ded9d0;
+  --portfolio-primary: #111111;
+  --portfolio-body: #4a4844;
+  --portfolio-muted: #68635c;
+  --portfolio-inverse: #ffffff;
+  --portfolio-inverse-muted: #d6d1c9;
+  --portfolio-secondary: #fa3674;
+  --portfolio-secondary-text: #b8004c;
+  --portfolio-tint: #ffe9f0;
+  --portfolio-tertiary: #baff39;
+
+  --color-glass-surface-strong: rgba(255, 255, 255, 0.76);
+  --color-glass-surface: rgba(255, 255, 255, 0.62);
+  --color-glass-surface-subtle: rgba(255, 255, 255, 0.44);
+  --color-glass-surface-dark: rgba(22, 23, 28, 0.76);
+  --color-glass-tile-dark: rgba(31, 32, 38, 0.52);
+  --color-glass-tint-pink: rgba(250, 54, 116, 0.2);
+  --color-glass-tint-lime: rgba(186, 255, 57, 0.36);
+  --color-glass-border-specular: rgba(255, 255, 255, 0.85);
+  --color-glass-border-dark: rgba(255, 255, 255, 0.22);
+  --color-glass-border-pink: rgba(250, 54, 116, 0.45);
+  --color-glass-border-lime: rgba(158, 224, 31, 0.55);
+
+  --radius-glass-card: 20px;
+  --radius-glass-control: 14px;
+  --radius-glass-pill: 999px;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #f7f6f3;
+  color: #111111;
+  font-family: var(--font-sans);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Figma Glass UI Effect Styles */
+.glass-header {
+  background: var(--color-glass-surface-strong);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border-bottom: 1px solid var(--color-glass-border-specular);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.78),
+    0 8px 24px -4px rgba(18, 18, 20, 0.05);
+}
+
+.glass-card {
+  background: var(--color-glass-surface);
+  backdrop-filter: blur(28px) saturate(165%);
+  -webkit-backdrop-filter: blur(28px) saturate(165%);
+  border: 1px solid var(--color-glass-border-specular);
+  border-radius: var(--radius-glass-card);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.82),
+    inset 0 -1px 2px rgba(255, 255, 255, 0.32),
+    0 14px 34px -6px rgba(20, 20, 26, 0.08);
+}
+
+.glass-card-strong {
+  background: var(--color-glass-surface-strong);
+  backdrop-filter: blur(28px) saturate(170%);
+  -webkit-backdrop-filter: blur(28px) saturate(170%);
+  border: 1px solid var(--color-glass-border-specular);
+  border-radius: var(--radius-glass-card);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.85),
+    inset 0 -1px 2px rgba(255, 255, 255, 0.35),
+    0 14px 34px -6px rgba(20, 20, 26, 0.08);
+}
+
+.glass-pill {
+  background: var(--color-glass-surface-strong);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid var(--color-glass-border-specular);
+  border-radius: var(--radius-glass-pill);
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.78),
+    0 6px 16px -2px rgba(20, 20, 26, 0.07);
+}
+
+.glass-pill-pink {
+  background: var(--color-glass-tint-pink);
+  backdrop-filter: blur(18px) saturate(175%);
+  -webkit-backdrop-filter: blur(18px) saturate(175%);
+  border: 1px solid var(--color-glass-border-pink);
+  border-radius: var(--radius-glass-pill);
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.65),
+    0 8px 20px -3px rgba(18, 18, 23, 0.08);
+}
+
+.glass-dark {
+  background: var(--color-glass-surface-dark);
+  backdrop-filter: blur(32px) saturate(165%);
+  -webkit-backdrop-filter: blur(32px) saturate(165%);
+  border: 1px solid var(--color-glass-border-dark);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.24),
+    0 20px 44px -8px rgba(13, 13, 20, 0.22);
+}
+
+.glass-pressed {
+  background: var(--color-glass-tint-lime);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-glass-border-lime);
+  box-shadow:
+    inset 0 2px 4px rgba(15, 15, 20, 0.14),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.45);
+}

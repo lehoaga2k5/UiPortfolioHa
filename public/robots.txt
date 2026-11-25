@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lehoanganh.id.vn/sitemap.xml
